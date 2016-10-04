@@ -11,7 +11,7 @@ host = socket.gethostname()
 @app.route('/')
 def hello():
     redis.incr('hits')
-    return '\n Test3 : Hello World!\n I have been seen %s times.\nMy Host name is %s\n\n' % (redis.get('hits') ,host)
+    return '\n Test 4 : Hello World!\n I have been seen %s times.\nMy Host name is %s\n\n' % (redis.get('hits') ,host)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=80, debug=True)
